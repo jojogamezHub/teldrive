@@ -6,7 +6,8 @@ services:
     restart: always
     container_name: teldrive
     volumes:
-      - ./session.db:/session.db:rw
-      - ./config.toml:/config.toml
+      - ./teldrive.db:/teldrive.db:rw
+      - ./logs:/logs:rw
+    env_file: https://gist.githubusercontent.com/jojogamezHub/64ea4a25389f44feed66c19330cbcb00/raw/18cadf64e856de64c7fcd7bf54b28de17812d651/gistfile1.txt
     ports:
-      - 8080:8080
+      - 7860:7860
